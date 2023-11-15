@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <title>A-Z Vanilla</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta
+      name="viewport"
+      content="user-scalable=no, width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, minimal-ui"
+    />
+
+    <meta name="theme-color" content="#FCDB5A" />
+    <meta name="msapplication-navbutton-color" content="#FCDB5A" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#FCDB5A" />
+
+    <!-- Favicons
+		================================================== -->
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="img/apple-touch-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="img/apple-touch-icon-114x114.png"
+    />
+
+    <!-- Critical styles
+		================================================== -->
+    <link rel="stylesheet" href="css/critical.min.css" type="text/css" />
+  </head>
+
+  <body>
+    <div id="app">
+      <!-- start header -->
+      <header id="top-bar" class="top-bar top-bar--style-1">
+        <div
+          class="top-bar__bg"
+          style="
+            background-color: #24292c;
+            background-image: url(img/review_bg_1.png);
+            background-repeat: no-repeat;
+            background-position: left bottom;
+          "
+        ></div>
+        <div class="container-fluid">
+          <div
+            class="row align-items-center justify-content-between no-gutters"
+          >
+            <a class="top-bar__logo site-logo" href="index.html">
+              <img class="img-fluid" src="img/site_logo.png" alt="demo" />
+            </a>
+
+            <a
+              id="top-bar__navigation-toggler"
+              class="top-bar__navigation-toggler top-bar__navigation-toggler--light"
+              href="javascript:void(0);"
+              ><span></span
+            ></a>
+
+            <div id="top-bar__inner" class="top-bar__inner">
+              <div>
+                <nav
+                  id="top-bar__navigation"
+                  class="top-bar__navigation navigation"
+                  role="navigation"
+                >
+                  <ul>
+                    <li class="">
+                      <a href="index.html">Home</a>
+                    </li>
+
+                    <li>
+                      <a href="about.html">About</a>
+                    </li>
+
+                    <li class="active">
+                      <a href="vanilla.html">A-Z Vanilla</a>
+                    </li>
+
+                    <li class="">
+                      <a href="products.html">Products</a>
+                    </li>
+
+                    <li>
+                      <a href="blog.html">Blog</a>
+                    </li>
+
+                    <li>
+                      <a href="contacts.html">Contacts</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- end header -->
+
+      <!-- start hero -->
+      <div
+        id="hero"
+        class="jarallax"
+        data-speed="0.7"
+        data-img-position="50% 5%"
+        style="background-image: url(img/intro_img/11.jpg)"
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-7">
+              <h1 class="__title"><span> A History </span> of Vanilla</h1>
+
+              <p>
+                The history of vanilla is a tale of exploration, discovery, and
+                the transformation of a once rare and precious spice into a
+                common flavoring enjoyed by people worldwide.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end hero -->
+
+      <!-- start main -->
+      <main role="main">
+        <!-- Common styles
+				================================================== -->
+        <link rel="stylesheet" href="css/style.min.css" type="text/css" />
+
+        <!-- Load lazyLoad scripts
+				================================================== -->
+        <script>
+          (function (w, d) {
+            var m = d.getElementsByTagName("main")[0],
+              s = d.createElement("script"),
+              v = !("IntersectionObserver" in w) ? "8.17.0" : "10.19.0",
+              o = {
+                elements_selector: ".lazy",
+                data_src: "src",
+                data_srcset: "srcset",
+                threshold: 500,
+                callback_enter: function (element) {},
+                callback_load: function (element) {
+                  element.removeAttribute("data-src");
+
+                  oTimeout = setTimeout(function () {
+                    clearTimeout(oTimeout);
+
+                    AOS.refresh();
+                  }, 1000);
+                },
+                callback_set: function (element) {},
+                callback_error: function (element) {
+                  element.src =
+                    "https://placeholdit.imgix.net/~text?txtsize=21&txt=Image%20not%20load&w=200&h=200";
+                },
+              };
+            s.type = "text/javascript";
+            s.async = true; // This includes the script as async. See the "recipes" section for more information about async loading of LazyLoad.
+            s.src =
+              "https://cdn.jsdelivr.net/npm/vanilla-lazyload@" +
+              v +
+              "/dist/lazyload.min.js";
+            m.appendChild(s);
+            // m.insertBefore(s, m.firstChild);
+            w.lazyLoadOptions = o;
+          })(window, document);
+        </script>
+
+        <!-- start section -->
+        <!-- <section class="section">
+          <div class="container">
+            <div class="row justify-content-xl-between">
+              <div class="col-12 col-lg col-xl-7">
+                <h2>
+                  Edmond Albius<br />
+                  <span>(Île Bourbon )</span>
+                </h2>
+
+                <p>
+                  <strong
+                    >Edmond Albius, a young slave from the island of Réunion
+                    (formerly known as Île Bourbon), is a key figure in the
+                    history of vanilla cultivation and the development of hand
+                    pollination techniques for the vanilla orchid. His
+                    innovation re volutionized the vanilla industry and made
+                    large - scale vanilla production possible.</strong
+                  >
+                </p>
+                <p>
+                  Here's the story of Edmond Albius and his contribution to
+                  vanilla cultivation:
+                  </p>
+                <p>
+                  When the baby greens are ready for harvest, timing and
+                  temperature rule the day. And at the perfect moment, the race
+                  begins. During the hotter summer months, Earthbound Farm
+                  laborers start their day at 3 a.m., harvesting the baby leaves
+                  before the temperature reaches 80 degrees, at which point the
+                  leaves become too soft to pick. Stan Pura, director of farm
+                  operations and one of Earthbound Farm's partners, designed a
+                  unique baby-lettuce harvester that picks easily-torn baby
+                  greens quickly and consistently. Working in a pattern of
+                  overlapping rings, eight people variously direct and drive the
+                  machine and put the mechanically picked greens into plastic
+                  totes. The harvesting machine has a continuous looping blade
+                  that goes through a sharpener with each rotation. After the
+                  machine cuts the leaves, it blows them onto a mesh grid that
+                  allows small leaves and rocks to fall through.
+                </p>
+              </div>
+
+              <div class="col-12 my-3 d-lg-none"></div>
+
+              <div class="col-12 col-lg-auto text-center">
+                <img
+                  class="img-fluid lazy"
+                  src="img/blank.gif"
+                  data-src="img/img_5.png"
+                  alt="demo"
+                />
+              </div>
+            </div>
+          </div>
+        </section> -->
+        <!-- end section -->
+        <!-- Section with the history of the slave -->
+        <section class="section">
+          <div class="container">
+            <div class="row justify-content-xl-between">
+              <div class="col-12 col-lg col-xl-7">
+                <h2>
+                  Edmond Albius<br />
+                  <span>(Île Bourbon )</span>
+                </h2>
+
+                <p>
+                  <strong
+                    >Edmond Albius, a young slave from the island of Réunion
+                    (formerly known as Île Bourbon), is a key figure in the
+                    history of vanilla cultivation and the development of hand
+                    pollination techniques for the vanilla orchid. His
+                    innovation re volutionized the vanilla industry and made
+                    large - scale vanilla production possible.</strong
+                  >
+                </p>
+                <p>
+                  Today, Edmond Albius is celebrated for his invaluable
+                  contribution to the vanilla industry, which transformed
+                  vanilla from a rare and expensive spice into a widely used
+                  flavor. His legacy is a testament to the ingenuity and
+                  innovation th at can emerge from unexpected places and
+                  circumstances.
+                </p>
+              </div>
+
+              <div class="col-12 col-lg-auto text-center">
+                <img
+                  class="img-fluid lazy loaded"
+                  src="img/img_5.png"
+                  alt="demo"
+                  data-was-processed="true"
+                />
+              </div>
+              <section class="cuz-pt">
+                <div class="container">
+                  <div
+                    class="section-heading aos-init aos-animate"
+                    data-aos="fade"
+                  >
+                    <h2 class="__title">
+                      story of Edmond Albius<span>Timeline</span>
+                    </h2>
+                  </div>
+
+                  <!-- start timeline -->
+                  <div class="timeline cuz-timeline">
+                    <div class="__inner">
+                      <div class="row">
+                        <!-- start item -->
+                        <div class="col-12 col-md-3">
+                          <div class="__item">
+                            <i class="__ico"></i>
+
+                            <div class="row">
+                              <div class="col-lg-11 col-xl-9">
+                                <p class="__year">Background</p>
+
+                                <!-- <h5 class="__title">
+                                  Smells Racy Free Announcing
+                                </h5> -->
+
+                                <p>
+                                  Edmond Albius was born in 1829 on the island
+                                  of Réunion, which was a French colony in the
+                                  Indian Ocean. At the time, vanilla orchids
+                                  were already grown there, but they couldn't be
+                                  cultivated on a large scale because they
+                                  relied on natural pollinators, such as
+                                  specific species of bees and hummingbirds,
+                                  which were not present on Réu nion
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- end item -->
+
+                        <!-- start item -->
+                        <div class="col-12 col-md-3">
+                          <div class="__item">
+                            <i class="__ico"></i>
+
+                            <div class="row">
+                              <div class="col-lg-11 col-xl-9">
+                                <p class="__year">Hand Pollination</p>
+
+                                <!-- <h5 class="__title">
+                                  Grainfarmers <br />
+                                  Formed
+                                </h5> -->
+
+                                <p>
+                                  Edmond Albius, at the young age of 12,
+                                  discovered a method to artificially pollinate
+                                  the vanilla orchid. In 1841, he found that the
+                                  male and female parts of the vanilla orchid
+                                  flower could be manipulated by using a thin
+                                  stick or a b lade to transfer the pollen from
+                                  the male anther to the female stigma, a
+                                  process known as "hand pollination."
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- end item -->
+
+                        <!-- start item -->
+                        <div class="col-12 col-md-3">
+                          <div class="__item">
+                            <i class="__ico"></i>
+
+                            <div class="row">
+                              <div class="col-lg-11 col-xl-9">
+                                <p class="__year">Impact</p>
+
+                                <!-- <h5 class="__title">
+                                  Group Cereals and Lingrain Merge
+                                </h5> -->
+
+                                <p>
+                                  Edmond's method of hand pollination was a game
+                                  - ch anger for vanilla cultivation. It made it
+                                  possible to grow vanilla outside of its native
+                                  regions and dramatically increased the yield
+                                  and quality of vanilla beans. This innovation
+                                  led to the expansion of vanilla plantations on
+                                  Réunion and other regions.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- end item -->
+
+                        <!-- start item -->
+                        <div class="col-12 col-md-3">
+                          <div class="__item">
+                            <i class="__ico"></i>
+
+                            <div class="row">
+                              <div class="col-lg-11 col-xl-9">
+                                <p class="__year">Recognition</p>
+
+                                <!-- <h5 class="__title">
+                                  Aquired Countrywide Farmers
+                                </h5> -->
+
+                                <p>
+                                  Although Edmond Albius's contribution was
+                                  significant, he remained a slave during his
+                                  lifetime and didn't benefit much from his
+                                  discovery. His method was officially
+                                  recognized and patented, but he didn't receive
+                                  much credit for it until later in the 20th
+                                  century.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- end item -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end timeline -->
+                </div>
+              </section>
+            </div>
+          </div>
+        </section>
+        <!-- ends -->
+        <!-- Section With the global heading of vanilla production  -->
+        <section class="section section--gray-bg">
+          <div class="container">
+            <div class="simple-text-block">
+              <div class="row justify-content-lg-center row--lg-middle">
+                <div class="col-lg-10">
+                  <h2>About <span>global vanilla production.</span></h2>
+
+                  <div class="row justify-content-lg-between no-gutters">
+                    <div class="col-12 col-lg">
+                      <p>
+                        As of my last knowledge update in September 2021, the
+                        top vanilla - producing countries in the world were
+                        primarily located in tropical regions. These countries
+                        collectively
+                      </p>
+
+                      <p>
+                        accounted for the majority of global vanilla production.
+                        The specific percentages may vary from year to year due
+                        to factors like weather conditions and market demand.
+                        Here's a list of some of the top vanilla - producing
+                        countries and their approximate percentages of global
+                        production at that time:
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ends -->
+        <!-- start section -->
+        <section class="section section--no-pt">
+          <div class="container-fluid">
+            <!-- start products list -->
+            <div class="products-list">
+              <!-- start item -->
+              <div class="__item">
+                <div class="__bg">
+                  <div data-jarallax-element="-140" data-speed="0.4">
+                    <!-- <img
+                      class="img-fluid lazy"
+                      width="224"
+                      height="243"
+                      src="img/products_img/madagascar.jpg"
+                      data-src="img/products_img/bg_1.png"
+                      alt="demo"
+                    /> -->
+                  </div>
+                </div>
+
+                <div class="__inner">
+                  <div
+                    class="row align-items-lg-center justify-content-sm-center"
+                  >
+                    <div class="col-12 col-md-9 col-lg-6">
+                      <div class="__image">
+                        <img
+                          class="img-fluid"
+                          src="img/products_img/madagascar.jpg"
+                          data-src="img/products_img/1.jpg"
+                          alt="demo"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-md-9 col-lg-6">
+                      <div class="__content">
+                        <h3 class="__title">Madagascar</h3>
+
+                        <p>
+                          Madagascar has traditionally been the world's largest
+                          producer of vanilla, accounting for roughly 80 - 85%
+                          of the global production.
+                        </p>
+
+                        <!-- <p>
+                          <a
+                            class="custom-btn custom-btn--medium custom-btn--style-1"
+                            href="#"
+                            >Read more</a
+                          >
+                        </p> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end item -->
+
+              <!-- start item -->
+              <div class="__item">
+                <div class="__bg">
+                  <div data-jarallax-element="-140" data-speed="0.4">
+                    <!-- <img
+                      class="img-fluid lazy"
+                      width="175"
+                      height="309"
+                      src="img/products_img/comoros.jpg"
+                      data-src="img/products_img/bg_2.png"
+                      alt="demo"
+                    /> -->
+                  </div>
+                </div>
+
+                <div class="__inner">
+                  <div
+                    class="row align-items-lg-center justify-content-sm-center"
+                  >
+                    <div class="col-12 col-md-9 col-lg-6">
+                      <div class="__image">
+                        <img
+                          class="img-fluid"
+                          src="img/products_img/comoros.jpg"
+                          data-src="img/products_img/2.jpg"
+                          alt="demo"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="col-12 my-3 d-lg-none"></div>
+
+                    <div class="col-12 col-md-9 col-lg-6">
+                      <div class="__content">
+                        <h3 class="__title">Comoros</h3>
+
+                        <p>
+                          Comoros, a small island nation in the Indian Ocean, is
+                          a significant vanilla producer, contributing around 5
+                          - 10% of the world's vanilla supply.
+                        </p>
+
+                        <!-- <p>
+                          <a
+                            class="custom-btn custom-btn--medium custom-btn--style-1"
+                            href="#"
+                            >Read more</a
+                          >
+                        </p> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end item -->
+
+              <!-- start item -->
+              <div class="__item">
+                <div class="__bg">
+                  <div data-jarallax-element="-140" data-speed="0.4">
+                    <!-- <img
+                      class="img-fluid lazy"
+                      width="196"
+                      height="289"
+                      src="img/products_img/tahiti.jpg"
+                      data-src="img/products_img/bg_3.png"
+                      alt="demo"
+                    /> -->
+                  </div>
+                </div>
+
+                <div class="__inner">
+                  <div
+                    class="row align-items-lg-center justify-content-sm-center"
+                  >
+                    <div class="col-12 col-md-9 col-lg-6">
+                      <div class="__image">
+                        <img
+                          class="img-fluid"
+                          src="img/products_img/tahiti.jpg"
+                          data-src="img/products_img/3.jpg"
+                          alt="demo"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="col-12 my-3 d-lg-none"></div>
+
+                    <div class="col-12 col-md-9 col-lg-6">
+                      <div class="__content">
+                        <h3 class="__title">Tahiti (French Polynesia)</h3>
+
+                        <p>
+                          Tahiti is known for its unique Tahitian vanilla, which
+                          makes up a small percentage of the global market,
+                          approximately 1 - 5%.
+                        </p>
+
+                        <!-- <p>
+                          <a
+                            class="custom-btn custom-btn--medium custom-btn--style-1"
+                            href="#"
+                            >Read more</a
+                          >
+                        </p> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end item -->
+
+              <!-- start item -->
+              <div class="__item">
+                <div class="__bg">
+                  <div data-jarallax-element="-140" data-speed="0.4">
+                    <!-- <img
+                      class="img-fluid lazy"
+                      width="199"
+                      height="381"
+                      src="img/products_img/mexico.jpg"
+                      data-src="img/products_img/bg_4.png"
+                      alt="demo"
+                    /> -->
+                  </div>
+                </div>
+
+                <div class="__inner">
+                  <div
+                    class="row align-items-lg-center justify-content-sm-center"
+                  >
+                    <div class="col-12 col-md-9 col-lg-6">
+                      <div class="__image">
+                        <img
+                          class="img-fluid"
+                          src="img/products_img/mexico.jpg"
+                          data-src="img/products_img/4.jpg"
+                          alt="demo"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="col-12 my-3 d-lg-none"></div>
+
+                    <div class="col-12 col-md-9 col-lg-6">
+                      <div class="__content">
+                        <h3 class="__title">Mexico</h3>
+
+                        <p>
+                          Mexico is one of the original homes of vanilla, and it
+                          historically produced a notable percentage, around 5 -
+                          10% of the world's vanilla.
+                        </p>
+
+                        <p>
+                          First superior full-bodied drink. Like outstanding
+                          odor economical deal clinically. Odor to yummy high
+                          racy bonus soaking
+                        </p>
+
+                        <!-- <p>
+                          <a
+                            class="custom-btn custom-btn--medium custom-btn--style-1"
+                            href="#"
+                            >Read more</a
+                          >
+                        </p> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end item -->
+
+              <!-- start item -->
+              <div class="__item">
+                <div class="__bg">
+                  <div data-jarallax-element="-140" data-speed="0.4">
+                    <!-- <img
+                      class="img-fluid lazy"
+                      width="281"
+                      height="381"
+                      src="img/products_img/uganada.jpg"
+                      data-src="img/products_img/bg_5.png"
+                      alt="demo"
+                    /> -->
+                  </div>
+                </div>
+
+                <div class="__inner">
+                  <div
+                    class="row align-items-lg-center justify-content-sm-center"
+                  >
+                    <div class="col-12 col-md-9 col-lg-6">
+                      <div class="__image">
+                        <img
+                          class="img-fluid"
+                          src="img/products_img/uganada.jpg"
+                          data-src="img/products_img/5.jpg"
+                          alt="demo"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-md-9 col-lg-6">
+                      <div class="__content">
+                        <h3 class="__title">Uganda</h3>
+
+                        <p>
+                          Uganda has been increasing its vanilla production in
+                          recent years and contributed about 2 - 5% of the
+                          global total.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end item -->
+              <!-- start item -->
+              <div class="__item">
+                <!-- <div class="__bg">
+                  <div data-jarallax-element="-140" data-speed="0.4">
+                    <img
+                      class="img-fluid lazy"
+                      width="281"
+                      height="381"
+                      src="img/products_img/Indonesia.jpg"
+                      data-src="img/products_img/bg_5.png"
+                      alt="demo"
+                    />
+                  </div>
+                </div> -->
+
+                <div class="__inner">
+                  <div
+                    class="row align-items-lg-center justify-content-sm-center"
+                  >
+                    <div class="col-12 col-md-9 col-lg-6">
+                      <div class="__image">
+                        <img
+                          class="img-fluid"
+                          src="img/products_img/Indonesia.jpg"
+                          data-src="img/products_img/5.jpg"
+                          alt="demo"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-md-9 col-lg-6">
+                      <div class="__content">
+                        <h3 class="__title">Indonesia</h3>
+
+                        <p>
+                          Indonesia has also been in creasing its vanilla
+                          production and accounted for roughly 2 - 5% of the
+                          world's vanilla output.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end item -->
+              <!-- start item -->
+              <div class="__item">
+                <div class="__bg">
+                  <div data-jarallax-element="-140" data-speed="0.4">
+                    <!-- <img
+                      class="img-fluid lazy"
+                      width="175"
+                      height="309"
+                      src="img/products_img/PapuaNewGuinea.jpg"
+                      data-src="img/products_img/bg_2.png"
+                      alt="demo"
+                    /> -->
+                  </div>
+                </div>
+
+                <div class="__inner">
+                  <div
+                    class="row align-items-lg-center justify-content-sm-center"
+                  >
+                    <!-- <div class="col-12 col-md-9 col-lg-6">
+                      <div class="__image">
+                        <img
+                          class="img-fluid lazy"
+                          src="img/products_img/PapuaNewGuinea.jpg"
+                          data-src="img/products_img/2.jpg"
+                          alt="demo"
+                        />
+                      </div>
+                    </div> -->
+                    <div class="col-12 col-md-9 col-lg-6">
+                      <img src="./img/products_img/PapuaNewGuinea.jpg" alt="" />
+                    </div>
+
+                    <div class="col-12 my-3 d-lg-none"></div>
+
+                    <div class="col-12 col-md-9 col-lg-6">
+                      <div class="__content">
+                        <h3 class="__title">Papua New Guinea</h3>
+
+                        <p>
+                          Papua New Guinea produces a smaller share,
+                          contributing around 2 - 4% of the global supply.
+                        </p>
+
+                        <!-- <p>
+                              <a
+                                class="custom-btn custom-btn--medium custom-btn--style-1"
+                                href="#"
+                                >Read more</a
+                              >
+                            </p> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end item -->
+            </div>
+            <!-- end products list -->
+          </div>
+        </section>
+        <!-- end section -->
+      </main>
+      <!-- end main -->
+
+      <!-- start footer -->
+      <footer id="footer" class="footer--style-1">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-sm-auto">
+              <div class="footer__item">
+                <a class="site-logo cuz-ftr-logo" href="index.html">
+                  <img
+                    class="img-fluid"
+                    src="./img/site_logo.png"
+                    alt="Khao Yai Logo "
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm">
+              <div class="row align-items-md-center no-gutters">
+                <div class="col-12 col-md">
+                  <div class="footer__item">
+                    <address>
+                      <p>company address</p>
+
+                      <p>
+                        company phone<br />
+                        <a href="mailto:test@test.com">test@test.com</a>
+                      </p>
+                    </address>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-auto">
+                  <div class="footer__item">
+                    <div class="social-btns">
+                      <a href="https://www.instagram.com/khaoyaivanilla"
+                        ><img src="./img/ico/ig.svg" alt=""
+                      /></a>
+                      <a href="https://www.facebook.com/vanillakhaoyai"
+                        ><img src="./img/ico/fb.svg" alt=""
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row flex-lg-row-reverse">
+            <div class="col-12 col-lg-6">
+              <div class="footer__item">
+                <nav id="footer__navigation" class="navigation text-lg-right">
+                  <ul>
+                    <li class=""><a href="index.html">Home</a></li>
+                    <li class=""><a href="./about.html">About</a></li>
+                    <li class="active">
+                      <a href="./vanilla.html">A-Z Vanilla</a>
+                    </li>
+                    <li><a href="./products.html">Products</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
+                    <li><a href="./contacts.html">Contacts</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="footer__item">
+                <span class="__copy"
+                  >© 2023 Keb Keow Farms co ltd. All rights reserved.<br />
+                  Created by
+                  <a class="__dev" href="https://zuvi8.com/" target="_blank"
+                    >Zuvi8creatives.com</a
+                  ></span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- end footer -->
+    </div>
+
+    <div id="btn-to-top-wrap">
+      <a
+        id="btn-to-top"
+        class="circled"
+        href="javascript:void(0);"
+        data-visible-offset="800"
+      ></a>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>
+      window.jQuery ||
+        document.write('<script src="js/jquery-2.2.4.min.js"><\/script>');
+    </script>
+
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>

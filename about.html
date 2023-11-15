@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <title>About Us</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta
+      name="viewport"
+      content="user-scalable=no, width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, minimal-ui"
+    />
+
+    <meta name="theme-color" content="#FCDB5A" />
+    <meta name="msapplication-navbutton-color" content="#FCDB5A" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#FCDB5A" />
+
+    <!-- Favicons
+		================================================== -->
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="img/apple-touch-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="img/apple-touch-icon-114x114.png"
+    />
+
+    <!-- Critical styles
+		================================================== -->
+    <link rel="stylesheet" href="css/critical.min.css" type="text/css" />
+
+    <script type="text/javascript" src="js/device.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <!-- start header -->
+      <header id="top-bar" class="top-bar top-bar--style-1">
+        <div
+          class="top-bar__bg"
+          style="
+            background-color: #24292c;
+            background-image: url(img/review_bg_1.png);
+            background-repeat: no-repeat;
+            background-position: left bottom;
+          "
+        ></div>
+
+        <div class="container-fluid">
+          <div
+            class="row align-items-center justify-content-between no-gutters"
+          >
+            <a class="top-bar__logo site-logo cuz-logo" href="index.html">
+              <img class="img-fluid" src="img/site_logo.png" alt="demo" />
+            </a>
+
+            <a
+              id="top-bar__navigation-toggler"
+              class="top-bar__navigation-toggler top-bar__navigation-toggler--light"
+              href="javascript:void(0);"
+              ><span></span
+            ></a>
+
+            <div id="top-bar__inner" class="top-bar__inner">
+              <div>
+                <nav
+                  id="top-bar__navigation"
+                  class="top-bar__navigation navigation"
+                  role="navigation"
+                >
+                  <ul>
+                    <li class="">
+                      <a href="./index.html">Home</a>
+                    </li>
+
+                    <li class="active">
+                      <a href="about.html">About</a>
+                    </li>
+
+                    <li class="">
+                      <a href="vanilla.html">A-Z Vanilla</a>
+                    </li>
+
+                    <li class="">
+                      <a href="./products.html">Products</a>
+                    </li>
+
+                    <li>
+                      <a href="blog.html">Blog</a>
+                    </li>
+
+                    <li>
+                      <a href="contacts.html">Contacts</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- end header -->
+
+      <!-- start hero -->
+      <div
+        id="hero"
+        class="jarallax"
+        data-speed="0.7"
+        data-img-position="50% 80%"
+        style="background-image: url(img/intro_img/1.jpg)"
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-7">
+              <h1 class="__title"><span>About</span> Khao Yai</h1>
+
+              <p>
+                Rooted from a modest backyard, Khao Yai Vanilla, spearheaded by
+                winemaker Nikki and fueled by the shared passion of Bonny,
+                originated from two plants gifted over a decade ago.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end hero -->
+
+      <!-- start main -->
+      <main role="main">
+        <!-- Common styles
+				================================================== -->
+        <link rel="stylesheet" href="css/style.min.css" type="text/css" />
+
+        <!-- Load lazyLoad scripts
+				================================================== -->
+        <script>
+          (function (w, d) {
+            var m = d.getElementsByTagName("main")[0],
+              s = d.createElement("script"),
+              v = !("IntersectionObserver" in w) ? "8.17.0" : "10.19.0",
+              o = {
+                elements_selector: ".lazy",
+                data_src: "src",
+                data_srcset: "srcset",
+                threshold: 500,
+                callback_enter: function (element) {},
+                callback_load: function (element) {
+                  element.removeAttribute("data-src");
+
+                  oTimeout = setTimeout(function () {
+                    clearTimeout(oTimeout);
+
+                    AOS.refresh();
+                  }, 1000);
+                },
+                callback_set: function (element) {},
+                callback_error: function (element) {
+                  element.src =
+                    "https://placeholdit.imgix.net/~text?txtsize=21&txt=Image%20not%20load&w=200&h=200";
+                },
+              };
+            s.type = "text/javascript";
+            s.async = true; // This includes the script as async. See the "recipes" section for more information about async loading of LazyLoad.
+            s.src =
+              "https://cdn.jsdelivr.net/npm/vanilla-lazyload@" +
+              v +
+              "/dist/lazyload.min.js";
+            m.appendChild(s);
+            // m.insertBefore(s, m.firstChild);
+            w.lazyLoadOptions = o;
+          })(window, document);
+        </script>
+
+        <!-- Head/ Hero section -->
+        <section class="section section--no-pb section--custom-01">
+          <div class="container">
+            <div class="section-heading">
+              <h2 class="__title">We are <span>Khao Yai Vanilla</span></h2>
+            </div>
+
+            <div class="row">
+              <div class="col-12 col-lg-6 col-xl-8">
+                <p>
+                  Rooted from a modest backyard, Khao Yai Vanilla, spearheaded
+                  by winemaker Nikki and fueled by the shared passion of Bonny,
+                  originated from two plants gifted over a decade ago. Intrigued
+                  by their resilience, Nikki embarked on pioneering vanilla
+                  cultivation in Khao Yai in 2015. What began as a captivating
+                  journey has evolved into a 5000 - plant vanilla farm,
+                  seamlessly blending Khao Yai terroir and modern farming
+                  practices.
+                </p>
+
+                <p>
+                  Our Humble Beginnings: From a modest backyard farm, Khao Yai
+                  Vanilla has evolved into a ren owned name among bakers and
+                  chefs. A family friend gave two plants over 10 years ago and
+                  with little care they were lost amongst the foliage in the
+                  garden. A few years later they were spotted flourishing and
+                  flowering in the wild.
+                </p>
+
+                <p>
+                  The Spark of Inspiration : Nikki, a winemaker in Khao Yai,
+                  Thailand, was fascinated by the vanilla's resilience in the
+                  wild and its unexpected ability to flower and bear beans,
+                  similar to grape vines. This sensory parallel with wine
+                  intrigued her, inspiring a desire to pioneer van illa
+                  cultivation in Thailand.
+                </p>
+
+                <p>
+                  The Journey Unfolds: In 2015, Nikki embarked on this venture,
+                  initially propagating a dozen vanilla plants. By 2017, Khao
+                  Yai Vanilla celebrated its first harvest, spurring Nikki's
+                  determination to establish a global presence in the vanilla
+                  scene. Overcoming challenges in the curing process, 2018
+                  marked a significant harvest, prompting a substantial
+                  expansion in her backyard.
+                </p>
+                <p>
+                  A Partnership and Shared Vision: In 2022, Nikki partnered with
+                  Bonny, sharing a passion for farming a nd a commitment to
+                  realizing the vanilla dream. Together, they've established
+                  shade houses, planted over 5,000 vines, and continue to
+                  expand. Their mission is to produce the finest grade vanilla
+                  beans from Khao Yai, showcasing the region's unique aromas.
+                </p>
+
+                <p>
+                  <a
+                    class="custom-btn custom-btn--medium custom-btn--style-1"
+                    href="contacts.html"
+                    >Get in Touch</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end section -->
+
+        <!-- section vision & mission  -->
+        <section class="section">
+          <div class="container-fluid">
+            <div class="product-features">
+              <!-- start item -->
+              <div class="__item">
+                <div class="__inner">
+                  <div class="row justify-content-center">
+                    <div class="col-12 col-md-9 col-lg-6">
+                      <div
+                        class="cuz-content d-flex flex-column align-items-center"
+                      >
+                        <div class="">
+                          <img
+                            class=""
+                            src="img/ico/vission.svg"
+                            alt="demo"
+                            data-was-processed="true"
+                          />
+                        </div>
+                        <h3 class="__title">Our Vission</h3>
+
+                        <div>
+                          <p>
+                            To excel as a premier producer of single - origin
+                            vanilla from Khao Yai, Thailand. Driven by the
+                            aspiration to encapsulate our vanilla ’ s unique
+                            essence of Khao Yai ’ s terroir, the commitment is
+                            to cultivate vanilla beans that authentically
+                            reflect the local environment's rich flavors and
+                            arom as.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-9 col-lg-6">
+                      <div
+                        class="cuz-content d-flex flex-column align-items-center"
+                      >
+                        <div class="">
+                          <img
+                            class="img-fluid"
+                            src="img/ico/mission.svg"
+                            alt="demo"
+                            data-was-processed="true"
+                          />
+                        </div>
+                        <h3 class="__title">Our Mission</h3>
+
+                        <div>
+                          <p>
+                            Offer the world some of the finest vanilla beans,
+                            cultivated sustainably with care by our dedicated
+                            team. To take you on a sensory journey that respects
+                            the beauty and authenticity of Khao Yai region.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end item -->
+
+              <!-- start item -->
+              <!-- <div class="__item">
+                <div class="__inner">
+                  <div class="row">
+                    
+                  </div>
+                </div>
+              </div> -->
+              <!-- end item -->
+            </div>
+          </div>
+        </section>
+        <!-- ends -->
+        <!-- Time Line  section -->
+        <section
+          class="section section--gutter section--base-bg section--custom-02"
+        >
+          <div class="container">
+            <div class="section-heading" data-aos="fade">
+              <h2 class="__title">Timeline</h2>
+            </div>
+
+            <!-- start timeline -->
+            <div class="timeline">
+              <div class="__inner">
+                <div class="row">
+                  <!-- start item -->
+                  <div class="col-12 col-md-3">
+                    <div class="__item">
+                      <i class="__ico"></i>
+
+                      <div class="row">
+                        <div class="col-lg-11 col-xl-9">
+                          <p class="__year">2015</p>
+
+                          <h5 class="__title">
+                            Propagated and planted a dozen vines
+                          </h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end item -->
+
+                  <!-- start item -->
+                  <div class="col-12 col-md-3">
+                    <div class="__item">
+                      <i class="__ico"></i>
+
+                      <div class="row">
+                        <div class="col-lg-11 col-xl-9">
+                          <p class="__year">2017</p>
+
+                          <h5 class="__title">A humble first harvest</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end item -->
+
+                  <!-- start item -->
+                  <div class="col-12 col-md-3">
+                    <div class="__item">
+                      <i class="__ico"></i>
+
+                      <div class="row">
+                        <div class="col-lg-11 col-xl-9">
+                          <p class="__year">2018</p>
+
+                          <h5 class="__title">Expansion</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end item -->
+
+                  <!-- start item -->
+                  <div class="col-12 col-md-3">
+                    <div class="__item">
+                      <i class="__ico"></i>
+
+                      <div class="row">
+                        <div class="col-lg-11 col-xl-9">
+                          <p class="__year">2020</p>
+
+                          <h5 class="__title">
+                            Sizable harvest from 250 plants
+                          </h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end item -->
+                  <!-- start item -->
+                  <div class="col-12 col-md-3">
+                    <div class="__item">
+                      <i class="__ico"></i>
+
+                      <div class="row">
+                        <div class="col-lg-11 col-xl-9">
+                          <p class="__year">2023</p>
+
+                          <h5 class="__title">
+                            Expand to one of the biggest producers in Thailand
+                          </h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end item -->
+                </div>
+              </div>
+            </div>
+            <!-- end timeline -->
+          </div>
+        </section>
+        <!-- end section -->
+
+        <!-- ABout the Farm  section -->
+        <section class="section">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-lg-6">
+                <h2>Farm <span>Information</span></h2>
+
+                <p>
+                  <strong
+                    >Latin words, combined with a handful of model sentence
+                    structures, to generate Lorem Ipsum which looks reasonable.
+                    The generated Lorem Ipsum is therefore always free from
+                    repetition injected humour, or non-characteristic words etc.
+                  </strong>
+                </p>
+
+                <p>
+                  Contrary to popular belief, Lorem Ipsum is not simply random
+                  text. It has roots in a piece of classical Latin literature
+                  from 45 BC, making it over 2000 years old. Richard McClintock,
+                  a Latin professor at Hampden-Sydney College in Virginia.looked
+                  up one of the more obscure Latin words, consectetur. from a
+                  Lorem Ipsum passage, and going through the cites of the word
+                  in classical literature, discovered.
+                </p>
+
+                <p>
+                  Sand tiger buri barbelless catfish pike characid bobtail snipe
+                  eel Ragfish, whale shark. Indian mul gulper milkfish sixgill
+                  ray bigeye squaretail temperate perch boxfish surgeonfish;
+                  sweeper.
+                </p>
+
+                <p>
+                  <a
+                    class="custom-btn custom-btn--medium custom-btn--style-1"
+                    href="#"
+                    >More about</a
+                  >
+                </p>
+              </div>
+
+              <div class="col-12 my-3 d-lg-none"></div>
+
+              <div class="col-12 col-lg-6">
+                <img
+                  class="img-fluid lazy loaded"
+                  src="img/img_3.jpg"
+                  alt="demo"
+                  data-was-processed="true"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end section -->
+        <!-- section team memebers -->
+        <section class="section section--no-pb section--custom-03 cuz-pt-4">
+          <div class="container">
+            <div
+              class="section-heading section-heading--center aos-init aos-animate"
+              data-aos="fade"
+            >
+              <h2 class="__title">Our <span>Team</span></h2>
+            </div>
+
+            <!-- start team -->
+            <div class="team">
+              <div class="__inner">
+                <div class="row justify-content-center">
+                  <!-- start item -->
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <div
+                      class="__item aos-init aos-animate"
+                      data-aos="fade"
+                      data-aos-delay="100"
+                      data-aos-offset="0"
+                    >
+                      <figure class="__image">
+                        <img
+                          class="lazy loaded"
+                          src="img/team_img/4.jpg"
+                          alt="demo"
+                          data-was-processed="true"
+                        />
+                      </figure>
+
+                      <div class="__content">
+                        <h5 class="__title">Nikki Lohitnavy</h5>
+                        <p class="team-sub-title">
+                          Founder and Managing Director
+                        </p>
+                        <!-- <span
+                          >Bachelor of Oenology and Honors in Viticulture
+                        </span> -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end item -->
+
+                  <!-- start item -->
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <div
+                      class="__item aos-init aos-animate"
+                      data-aos="fade"
+                      data-aos-delay="200"
+                      data-aos-offset="0"
+                    >
+                      <figure class="__image">
+                        <img
+                          class="lazy loaded"
+                          src="img/team_img/2.jpg"
+                          alt="demo"
+                          data-was-processed="true"
+                        />
+                      </figure>
+
+                      <div class="__content">
+                        <h5 class="__title">Bonny Babu</h5>
+                        <p class="team-sub-title">Founder and CEO</p>
+                        <!-- <span
+                          >Bachelor of Engineering in Electronics and
+                          Telecommunication</span
+                        > -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end item -->
+                </div>
+              </div>
+            </div>
+            <!-- end team -->
+          </div>
+        </section>
+        <!-- ends -->
+        <!-- Clients section -->
+        <section class="section">
+          <div class="container">
+            <div
+              class="section-heading section-heading--center"
+              data-aos="fade"
+            >
+              <h2 class="__title">Partners</h2>
+
+              <p>
+                Latin words, combined with a handful of model sentence
+                structures, to generate Lorem Ipsum which looks reasonable.
+              </p>
+            </div>
+
+            <div class="partners-list">
+              <div
+                class="js-slick"
+                data-slick='{
+								 "autoplay": true,
+								 "arrows": false,
+								 "dots": true,
+								 "speed": 1000,
+								 "responsive": [
+									{
+										"breakpoint":576,
+										"settings":{
+											"slidesToShow": 2
+										}
+									},
+									{
+										"breakpoint":767,
+										"settings":{
+											"slidesToShow": 3
+										}
+									},
+									{
+										"breakpoint":991,
+										"settings":{
+											"slidesToShow": 4
+										}
+									},
+									{
+										"breakpoint":1199,
+										"settings":{
+											"autoplay": false,
+											"dots": false,
+											"slidesToShow": 5
+										}
+									}
+								]}'
+              >
+                <div class="__item">
+                  <img
+                    class="img-fluid m-auto"
+                    src="img/partners_img/1.png"
+                    alt="demo"
+                  />
+                </div>
+
+                <div class="__item">
+                  <img
+                    class="img-fluid m-auto"
+                    src="img/partners_img/2.png"
+                    alt="demo"
+                  />
+                </div>
+
+                <div class="__item">
+                  <img
+                    class="img-fluid m-auto"
+                    src="img/partners_img/3.png"
+                    alt="demo"
+                  />
+                </div>
+
+                <div class="__item">
+                  <img
+                    class="img-fluid m-auto"
+                    src="img/partners_img/4.jpeg"
+                    alt="demo"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end section -->
+      </main>
+      <!-- end main -->
+
+      <!-- start footer -->
+      <footer id="footer" class="footer--style-1">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-sm-auto">
+              <div class="footer__item">
+                <a class="site-logo cuz-ftr-logo" href="index.html">
+                  <img
+                    class="img-fluid"
+                    src="./img/site_logo.png"
+                    alt="Khao Yai Logo "
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm">
+              <div class="row align-items-md-center no-gutters">
+                <div class="col-12 col-md">
+                  <div class="footer__item">
+                    <address>
+                      <p>company address</p>
+
+                      <p>
+                        company phone<br />
+                        <a href="mailto:test@test.com">test@test.com</a>
+                      </p>
+                    </address>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-auto">
+                  <div class="footer__item">
+                    <div class="social-btns">
+                      <a href="https://www.instagram.com/khaoyaivanilla"
+                        ><img src="./img/ico/ig.svg" alt=""
+                      /></a>
+                      <a href="https://www.facebook.com/vanillakhaoyai"
+                        ><img src="./img/ico/fb.svg" alt=""
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row flex-lg-row-reverse">
+            <div class="col-12 col-lg-6">
+              <div class="footer__item">
+                <nav id="footer__navigation" class="navigation text-lg-right">
+                  <ul>
+                    <li class=""><a href="index.html">Home</a></li>
+                    <li class="active"><a href="./about.html">About</a></li>
+                    <li><a href="./vanilla.html">A-Z Vanilla</a></li>
+                    <li><a href="./products.html">Products</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
+                    <li><a href="./contacts.html">Contacts</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="footer__item">
+                <span class="__copy"
+                  >© 2023 Keb Keow Farms co ltd. All rights reserved.<br />
+                  Created by
+                  <a class="__dev" href="https://zuvi8.com/" target="_blank"
+                    >Zuvi8creatives.com</a
+                  ></span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- end footer -->
+    </div>
+
+    <div id="btn-to-top-wrap">
+      <a
+        id="btn-to-top"
+        class="circled"
+        href="javascript:void(0);"
+        data-visible-offset="800"
+      ></a>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>
+      window.jQuery ||
+        document.write('<script src="js/jquery-2.2.4.min.js"><\/script>');
+    </script>
+
+    <script type="text/javascript" src="js/main.js"></script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+  </body>
+</html>
