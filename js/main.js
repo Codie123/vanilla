@@ -9507,7 +9507,11 @@
           (t.$slideTrack =
             0 === t.slideCount
               ? c('<div class="slick-track"/>').appendTo(t.$slider)
-              : t.$slides.wrapAll('<div class="slick-track"/>').parent()),
+              : t.$slides
+                  .wrapAll(
+                    '<div class="slick-track d-flex align-items-center"/>'
+                  )
+                  .parent()),
           (t.$list = t.$slideTrack.wrap('<div class="slick-list"/>').parent()),
           t.$slideTrack.css("opacity", 0),
           (!0 !== t.options.centerMode && !0 !== t.options.swipeToSlide) ||
